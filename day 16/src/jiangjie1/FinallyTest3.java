@@ -1,0 +1,35 @@
+package jiangjie1;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class FinallyTest3 {
+    public static void main(String[] args) {
+        FileInputStream fis=null;
+        try {
+            File file = new File("hello.text");
+            fis = new FileInputStream(file);
+            int date = fis.read();
+            while (date != -1) {
+                System.out.println((char) date);
+                date = fis.read();
+            }
+            fis.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (fis != null) {
+                    fis.close();
+                }
+            }
+                catch(IOException e){
+                    e.printStackTrace();
+            }
+        }
+    }
+}
