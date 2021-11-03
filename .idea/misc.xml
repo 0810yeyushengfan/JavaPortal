@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb day 1" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_1" />
     <file type="web" url="file://$PROJECT_DIR$/Maven_Web" />
     <file type="web" url="file://$PROJECT_DIR$/MyBatis" />
     <file type="web" url="file://$PROJECT_DIR$/untitled" />
@@ -14,6 +16,8 @@
         <option value="$PROJECT_DIR$/Maven_Java/Maven_Java/pom.xml" />
         <option value="$PROJECT_DIR$/Maven_Java/pom.xml" />
         <option value="$PROJECT_DIR$/Maven_Web/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb day 1/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb  day 1/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -8,11 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Maven_java" />
         <module name="Maven_Web" />
+        <module name="JavaWeb_day_1" />
         <module name="Maven_Java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Maven_day_1" target="1.8" />
+      <module name="JavaWeb day 1" target="1.8" />
+      <module name="JavaWeb_day_1" target="1.8" />
+      <module name="Maven" target="1.8" />
+      <module name="Maven day 2" target="1.8" />
       <module name="Maven_java" target="1.8" />
       <module name="MyBatis day 6" target="1.8" />
       <module name="test" target="1.8" />

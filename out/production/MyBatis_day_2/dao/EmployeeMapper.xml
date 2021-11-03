@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="dao.EmployeeMapper">
+
+    <!--两个相同id的sql，一个指定了数据库，一个没指定，会优先运行指定数据库的sql-->
+    <!--public Employee getEmpById(Integer id);-->
+        <select id="getEmpById" resultType="helloWorld.Employee" >
+            select * from tbl_employee where id = #{id}
+        </select>
+        <select id="getEmpById" resultType="helloWorld.Employee" databaseId="mysql">
+            select * from tbl_employee where id = #{id}+1
+        </select>
+
+        <select id="getEmpById" resultType="helloWorld.Employee" databaseId="oracle">
+            select EMPLOYEE_ID id,LAST_NAME lastname,EMAIL email
+            from employee where EMPLOYEE_ID = #{id}
+         </select>
+
+
+    <!--public void addEmp(Employee employee);-->
+    <!--parameterType:参数类型(可以省略)-->
+    <!--获取自增主键的值:
+                      MySQL支持自增主键:自增主键的获取，mybatis也是利用statement.getGenreateKeys()方法来获取的
+                      userGenerateKeys="true":使用自增主键获取主键值的策略
+                      keyProperty:指定对应的主键属性，也就是mybatis获取到主键值以后，将这个值封装给JavaBean的哪个属性
+
+    -->
+        <insert id="addEmp" parameterType="helloWorld.Employee"
+        useGeneratedKeys="true" keyProperty="id" databaseId="mysql">
+            insert into tbl_employee(last_name,email,gender)
+            values(#{lastName},#{email},#{gender})
+        </insert>
+    <!--
+        Oracle不支持自增:Oracle使用序列来模拟自增，即每次插入的数据的主键是从序列中拿到的值，如何获取到这个值
+    -->
+    <insert id="addEmp" parameterType="helloWorld.Employee" databaseId="oracle">
+        <!--
+        keyProperty:查出的主键值封装给JavaBean的哪个属性
+        order:"BEFORE":当前sql在插入sql之间执行，即先运行selectKey查询id的sql，查出id值封装给JavaBean的id属性，
+                       再运行插入的sql，就可以取出id属性对应的值
+              "AFTER":与"BEFORE"相反
+        resultType:查出的数据的返回值类型
+        -->
+
+
+        <selectKey keyProperty="id" order="BEFORE" resultType="_int">
+--             编写查询主键的sql语句
+--                 BEFORE
+                select EMPLOYEES_SEQ.nextval from dual
+--                 AFTER
+--              select EMPLOYEES_SEQ.currval from dual
+        </selectKey>
+--         插入时的主键是从序列中拿到的
+--                 BEFORE
+        insert into employees(EMPLOYEE_ID,LAST_NAME,EMAIL)
+        values (#{id},#{lastName},#{email})
+--                 AFTER
+--         insert into employees(EMPLOYEE_ID,LAST_NAME,EMAIL)
+--         values (#{employee_seq.nextval},#{lastName},#{email})
+
+    </insert>
+    <!--public void updateEmp(Employee employee);-->
+    <update id="updateEmp" >
+        update tbl_employee
+        set last_name=#{lastName},email=#{email},gender=#{gender}
+        where id=#{id}
+    </update>
+
+    <!--public void deleteEmpById(Integer id);-->
+    <delete id="deleteEmpById">
+        delete from tbl_employee where id=#{id}
+    </delete>
+
+    <!--public Employee getEmpByIdAndLastName(@Param("id")Integer id,@Param("lastName")String lastName);-->
+    <select id="getEmpByIdAndLastName" resultType="helloWorld.Employee">
+        select * from tbl_employee where id = #{id} and last_name = #{param2}
+    </select>
+
+    <!--public Employee getEmpByMap(Map<String,Object> map);-->
+    <select id="getEmpByMap" resultType="helloWorld.Employee">
+        select * from tbl_employee where id = #{id} and last_name = #{lastName}
+    </select>
+
+    <!--public List<Employee> getEmpsByLastNameLike(String lastName); -->
+    <!--resultType:如果返回的是一个集合，要写集合中元素的类型-->
+    <select id="getEmpsByLastNameLike" resultType="helloWorld.Employee">
+        select * from tbl_employee where last_name like #{lastName}
+    </select>
+
+
+    <!--public Map<String,Object> getEmpByIdReturnMap(Integer id);-->
+    <select id="getEmpByIdReturnMap" resultType="map">
+        select * from tbl_employee where id = #{id}
+    </select>
+
+    <!--public Map<Integer,Employee> getEmpByLastNameLikeReturnMap(String lastName);-->
+    <select id="getEmpByLastNameLikeReturnMap" resultType="helloWorld.Employee">
+        select * from tbl_employee where last_name like #{lastName}
+    </select>
+</mapper>
