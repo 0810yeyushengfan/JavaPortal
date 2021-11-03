@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <!--指定pom的模型版本-->
+  <modelVersion>4.0.0</modelVersion>
+  <!--打包方式:web工程打包为war，java工程打包为jar-->
+  <packaging>war</packaging>
+
+  <name>Maven_Web</name>
+
+  <!--组织id-->
+  <groupId>org.example</groupId>
+  <!--项目id-->
+  <artifactId>Maven_Web</artifactId>
+  <!--版本号:release(发行版)，snaposhot(测试版)-->
+  <version>1.0-SNAPSHOT</version>
+
+
+  <!--设置当前项目所依赖的所有jar-->
+  <dependencies>
+    <!--设置具体的依赖-->
+    <dependency>
+      <!--依赖所属群组的id-->
+      <groupId>junit</groupId>
+      <!--依赖所属项目的id-->
+      <artifactId>junit</artifactId>
+      <!--依赖的版本号-->
+      <version>4.12</version>
+      <!--
+          依赖范围:依赖的jar默认情况下可以在任何地方使用，可以通过scope标签设定其作用范围
+          1.主程序范围有效(main文件夹范围内)
+          2.测试程序范围有效(test文件夹范围内)
+          3.是否参与打包(package指令范围内)
+
+          scope:
+          1.compile(默认):main(√),test(√),package(√),典型代表:log4j
+          2.test:main(×),test(√),package(×),典型代表:junit
+          3.provided:main(√),test(√),package(×),典型代表:servlet-api
+          4.runtime:main(×),test(×),package(√),典型代表:jdbc
+
+          依赖范围传递性:带有依赖范围的资源在进行传递时，作用范围将受到影响(A依赖B，B依赖C，A对B中的C为直接依赖，B对C为间接依赖，在B中对C的依赖范围进行修改，可能会对A中的C的依赖范围造成影响)
+          1.间接依赖设置依赖为compile，不论直接依赖设置为什么，显示的依赖范围都是compile
+          2.间接依赖设置依赖为runtime，不论直接依赖设置为什么，显示的依赖范围都是runtime
+          3.间接依赖设置为其他，不论直接依赖设置为什么，都不显示依赖范围
+      -->
+      <scope>test</scope>
+      <!--
+            依赖传递冲突问题:
+            1.路径优先:当依赖中出现相同的资源时，层级越深，优先级越低，层级越浅，优先级越高
+            2.声明优先:当资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的
+            3.特殊优先:当同级配置了相同资源的不同版本，后配置的覆盖先配置的
+      -->
+      <!--依赖传递冲突问题的解决方式一:可选依赖:指对外隐藏当前所依赖的资源——不透明-->
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+  <!--构建-->
+  <build>
+    <!--设置插件-->
+    <plugins>
+      <!--具体的插件配置-->
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.1</version>
+        <!--插件的个性化配置-->
+        <configuration>
+          <!--端口号-->
+          <port>8081</port>
+          <!--虚拟路径-->
+          <path>/</path>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <!--
+      插件:
+      1.插件与生命周期内的阶段绑定，在执行到对应生命周期时执行对应的插件功能
+      2.默认maven在各个生命周期上绑定有预设的功能
+      3.通过插件可以自定义其他功能
+  -->
+<!--  <build>-->
+<!--    <plugins>-->
+<!--      <plugin>-->
+<!--        <groupId>org,apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-source-plugin</artifactId>-->
+<!--        <version>2.2.1</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>jer</goal>-->
+<!--            </goals>-->
+<!--            <phase>generate-test-resources</phase>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </build>-->
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Maven</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <!--依赖传递冲突问题的解决方式二:排除依赖:指主动断开依赖的资源-->
+            <exclusions>
+                <exclusion>
+                    <!--不需要指定版本，排除所依赖的maven项目的关于此资源的所有版本-->
+                    <groupId>org.example</groupId>
+                    <artifactId>Maven_Web</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!--组织id-->
+            <groupId>org.example</groupId>
+            <!--项目id-->
+            <artifactId>Maven_Web</artifactId>
+            <!--版本号:release(发行版)，snaposhot(测试版)-->
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>

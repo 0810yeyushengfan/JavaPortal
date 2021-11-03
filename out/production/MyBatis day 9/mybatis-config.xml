@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeHandlers>
+        <!--1.配置我们自定义的typeHandler-->
+        <typeHandler handler="typehandler.MyEnumEmpStatusTypeHandler" javaType="bean.EmpStatus"/>
+        <!--
+            2.也可以在处理某个字段的时候告诉mybatis用什么类型处理器
+            2.1.保存:#{empStatus,,typeHandler=typehandler.MyEnumEmpStatusTypeHandler}
+            2.2.查询:
+                    <resultMap type="bean.Employee" id="MyEmp">
+                    <id column="id" property="id"/>
+                    <result colum="empStatus" property="empStatus" typeHandler="typehandler.MyEnumEmpStatusTypeHandler"/>
+                    </result>
+        -->
+    </typeHandlers>
+    <!--在数据库中保存枚举类的索引(默认保存枚举类的名字)-->
+<!--    <typeHandlers>-->
+<!--        <typeHandler handler="org.apache.ibatis.type.EnumOrdinalTypeHandler" javaType="bean.EmpStatus"/>-->
+<!--    </typeHandlers>-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="zyh769317."/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <!--将我们写好的sql映射文件(EmployeeMapper.xml)一定要注册到全局配置文件(mybatis-config.xml)中,
+    如果sql映射文件在类路径下，直接写文件名即可，如果在其他包下，需要用包名/类名的方式注册-->
+    <mappers>
+        <mapper resource="EmployeeMapper.xml"/>
+    </mappers>
+</configuration>

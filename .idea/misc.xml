@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Maven_Web" />
+    <file type="web" url="file://$PROJECT_DIR$/MyBatis" />
+    <file type="web" url="file://$PROJECT_DIR$/untitled" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Maven day 1/pom.xml" />
+        <option value="$PROJECT_DIR$/Maven/pom.xml" />
+        <option value="$PROJECT_DIR$/Maven_Java/Maven_Java/pom.xml" />
+        <option value="$PROJECT_DIR$/Maven_Java/pom.xml" />
+        <option value="$PROJECT_DIR$/Maven_Web/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Maven_Java/Maven_Web/pom.xml" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
