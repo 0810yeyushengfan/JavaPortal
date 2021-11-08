@@ -27,15 +27,35 @@ Servlet程序的生命周期:
 4.执行destroy销毁方法
 第4步在当前web工程停止时执行
  */
-public class helloServlet implements Servlet {
 
-    public helloServlet(){
+/*
+ServletConfig类:
+1.从类名上来看，就知道是Servlet程序的配置信息类。
+2.Servlet程序和ServletConfig对象都是由Tomcat负责创建，我们负责使用。
+3.Servlet程序默认是第一次访问的时候创建，ServletConfig是每个Servlet程序创建时，会在init()中传入一个ServletConfig对象，并创建一个对应的ServletConfig属性将其保存起来
+
+ServletConfig类的三大作用:
+1.可以获取Servlet程序的别名即<servlet-name>的值
+2.获取初始化参数即<init-param>的值
+3.获取ServletContext对象
+ */
+
+public class HelloServlet implements Servlet {
+
+    public HelloServlet(){
         System.out.println("第一步:执行Servlet构造器方法");
     }
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("第二步:执行init初始化方法");
+        // 1、可以获取 Servlet 程序的别名 servlet-name 的值
+        System.out.println("HelloServlet程序的别名是:" + servletConfig.getServletName());
+        // 2、获取初始化参数 init-param
+         System.out.println("初始化参数username的值是:" + servletConfig.getInitParameter("username"));
+         System.out.println("初始化参数url的值是:" + servletConfig.getInitParameter("url"));
+        // 3、获取 ServletContext 对象
+        System.out.println(servletConfig.getServletContext());
 
     }
 
@@ -49,7 +69,7 @@ public class helloServlet implements Servlet {
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 
-        System.out.println("helloServlet 被访问了!");
+        System.out.println("helloServlet被访问了!");
         System.out.println("第三步:执行service方法");
         //HttpServletRequest是ServletRequest的子类，只有它有getMethod()方法
         HttpServletRequest httpServletRequest= (HttpServletRequest) servletRequest;
@@ -71,11 +91,12 @@ public class helloServlet implements Servlet {
     public void destroy() {
         System.out.println("第四步:执行destroy销毁方法");
     }
+
     public void doGet(){
-        System.out.println("get请求");
+        System.out.println("HelloServlet接收了get请求");
     }
 
     public void doPost(){
-        System.out.println("post请求");
+        System.out.println("HelloServlet接收了post请求");
     }
 }

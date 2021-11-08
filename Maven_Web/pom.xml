@@ -53,6 +53,19 @@
       <!--依赖传递冲突问题的解决方式一:可选依赖:指对外隐藏当前所依赖的资源——不透明-->
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <!--依赖2 -->
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <!--构建-->

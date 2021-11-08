@@ -1,0 +1,17 @@
+Web中的相对路径和绝对路径:
+在javaWeb中，路径分为相对路径和绝对路径两种:
+1.相对路径是:
+./:表示当前目录
+../:表示上一级目录
+资源名:表示当前目录/资源名
+2..绝对路径是:
+http://ip:port/工程路径/资源路径
+3.在实际开发中，路径都使用绝对路径或者是<base>标签+相对路径，而不简单的使用相对路径
+
+web中/(斜杠)的不同意义:在web中/(斜杠)是一种绝对路径:
+1./(斜杠)如果被浏览器解析，得到的地址是:http://ip:port/，比如<a href="/">斜杠</a>
+2./(斜杠)如果被服务器解析，得到的地址是:http://ip:port/工程路径，比如
+2.1.<url-pattern>/servlet1</url-pattern>
+2.2.servletContext.getRealPath(“/”);
+2.3.request.getRequestDispatcher(“/”);
+3.特殊情况:response.sendRediect(“/”); 把斜杠发送给浏览器解析。得到 http://ip:port/

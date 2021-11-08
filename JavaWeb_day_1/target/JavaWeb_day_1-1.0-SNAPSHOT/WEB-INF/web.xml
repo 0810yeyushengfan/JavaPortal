@@ -3,12 +3,137 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!--context-param 是上下文参数(它属于整个 web 工程)-->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>context</param-value>
+    </context-param>
+    <!--context-param 是上下文参数(它属于整个 web 工程)-->
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+    <!--servlet标签给Tomcat配置Servlet程序-->
     <servlet>
-        <servlet-name>helloServlet</servlet-name>
-        <servlet-class>servlet.helloServlet</servlet-class>
+        <!--servlet-name标签给Servlet程序起一个别名(一般是类名)-->
+        <servlet-name>HelloServlet</servlet-name>
+        <!--servlet-class标签是Servlet程序的全类名-->
+        <servlet-class>servlet.HelloServlet</servlet-class>
+        <!--init-param是初始化参数-->
+        <init-param>
+            <!--param-name是参数名-->
+            <param-name>username</param-name>
+            <!--param-value是参数值-->
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <!--param-name是参数名-->
+            <param-name>url</param-name>
+            <!--param-value是参数值-->
+            <param-value>jdbc:mysql://localhost:3306/test</param-value>
+        </init-param>
+    </servlet>
+    <!--servlet-mapping标签给Servlet程序配置访问地址-->
+    <servlet-mapping>
+        <!--servlet-name标签的作用是告诉服务器，我当前配置的地址给哪个Servlet程序使用-->
+        <servlet-name>HelloServlet</servlet-name>
+        <!--
+        url-pattern标签的作用是配置访问地址:
+        1./(斜杠)在服务器解析的时候，表示地址为:http://ip:port/当前工程路径
+        2./helloServlet表示地址为:http://ip:port/当前工程路径/helloServlet
+        -->
+        <url-pattern>/HelloServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloServlet2</servlet-name>
+        <servlet-class>servlet.HelloServlet2</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>helloServlet</servlet-name>
-        <url-pattern>/1</url-pattern>
+        <servlet-name>HelloServlet2</servlet-name>
+        <url-pattern>/HelloServlet2</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>HelloServlet3</servlet-name>
+    <servlet-class>servlet.HelloServlet3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet3</servlet-name>
+        <url-pattern>/HelloServlet3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestAPIServlet</servlet-name>
+        <servlet-class>servlet.RequestAPIServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestAPIServlet</servlet-name>
+        <url-pattern>/RequestAPIServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ParameterServlet</servlet-name>
+        <servlet-class>servlet.ParameterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParameterServlet</servlet-name>
+        <url-pattern>/ParameterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>servlet.Servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/Servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>servlet.Servlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/Servlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForwardC</servlet-name>
+        <servlet-class>servlet.ForwardC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardC</servlet-name>
+        <url-pattern>/ForwardC</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResponseIOServlet</servlet-name>
+        <servlet-class>servlet.ResponseIOServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResponseIOServlet</servlet-name>
+        <url-pattern>/ResponseIOServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Response1</servlet-name>
+        <servlet-class>servlet.Response1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Response1</servlet-name>
+        <url-pattern>/Response1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Response2</servlet-name>
+        <servlet-class>servlet.Response2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Response2</servlet-name>
+        <url-pattern>/Response2</url-pattern>
     </servlet-mapping>
 </web-app>
