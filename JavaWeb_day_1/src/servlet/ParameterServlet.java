@@ -24,7 +24,7 @@ public class ParameterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //快捷方式:设置请求体的字符集为UTF-8，从而解决post请求的中文乱码问题
         //必须要在获取请求参数之前调用才有效
-//        request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         System.out.println("-------------doPost------------");
         //获取请求参数
         String username = request.getParameter("username");

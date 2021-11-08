@@ -24,7 +24,7 @@ public class Servlet1 extends HttpServlet {
         request.setAttribute("key1","柜台1的章");
         //问路:Servlet2(柜台2)怎么走
         //请求转发必须要以斜杠打头，/(斜杠)表示地址为:http://ip:port/工程名/,即映射到IDEA代码的web目录
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Servlet2");
+        //RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Servlet2");
         //RequestDispatcher requestDispatcher = request.getRequestDispatcher("http://www.baidu.com");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/b.html");
         //走向Sevlet2(柜台2)
