@@ -16,11 +16,12 @@
     <title>JSP</title>
 </head>
 <body>
-<%--1.jsp页面是一个类似于html的一个页面。jsp直接存放到web目录下，和 html一样，访问jsp的时候，也和访问html一样 --%>
-<%--2.jsp的默认编码集是iso-8859-1，需要修改jsp的默认编码为UTF-8--%>
+<%--jsp页面是一个类似于html的一个页面。jsp直接存放到web目录下，和 html一样，访问jsp的时候，也和访问html一样 --%>
 
-<%--jsp的实质:--%>
-<%--当我们访问一个xxx.jsp文件后，其翻译成java文件的全名是xxx_jsp.java文件，xxx_jsp.java文件是一个Servlet 程序。--%>
+<%--jsp的实质:当我们第一次访问jsp页面的时候。Tomcat服务器会帮我们把jsp页面翻译成为一个java源文件。并且对它进行编译成为.class字节码程序--%>
+<%--我们跟踪源代码发现了HttpJspBase类。它直接地继承了HttpServlet类。也就是说jsp翻译出来的java类间接了继承了HttpServlet类。--%>
+<%--也就是说，翻译出来的是一个Servlet程序--%>
+<%--当我们访问一个xxx.jsp文件后，其翻译成java文件的全名是xxx_jsp.java文件，xxx_jsp.java文件是一个Servlet程序。--%>
 <%--原来jsp中的html内容都被翻译到Servlet类的service()方法中原样输出。--%>
 <h1>hello jsp 中国</h1>
 </body>

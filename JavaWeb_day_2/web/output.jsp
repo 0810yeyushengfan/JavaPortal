@@ -8,8 +8,8 @@
 <body>
 <%--jsp的out和response的write的说明:--%>
 <%--1.所有jsp中out输出流的内容都必须要先通过flush()方法写入到Response的writer对象的缓冲区中，才能最终输出到客户端(浏览器)--%>
-<%--2.而jsp的out输出到Response的Writer对象的缓冲区，永远是追加到writer缓冲区的末尾，即若不是手动flush()，需要到Response--%>
-<%--中的Writer对象中的数据全部写入缓冲区之后，才会自动flush()，将out输出流中的内容写入缓冲区--%>
+<%--2.而jsp的out输出流的内容写入到Response的writer对象的缓冲区中时，永远是追加到writer缓冲区的末尾，而且若不是手动flush()，需要到jsp页面
+所有代码全部执行完毕之后，才会自动flush()，将out输出流中的内容写入writer缓冲区末尾，最后(即jsp代码全部执行完毕之后)执行Response的刷新操作，把全部数据写给客户端--%>
 <%
 //out输出
 out.write("这是out的第一次输出<br/>");
@@ -21,5 +21,9 @@ out.write("这是 out 的第二次输出<br/>");
 response.getWriter().write("这是 writer 的第一次输出<br/>");
 response.getWriter().write("这是 writer 的第二次输出<br/>");
 %>
+<%--由于jsp翻译之后，底层源代码都是使用out来进行输出，所以一般情况下我们在jsp页面中统一使用out来进行输出。避免打乱页面输出内容的顺序。--%>
+<%--out.write():输出字符串没有问题，输出其他类型的变量会出现问题--%>
+<%--out.print():输出任意数据都没有问题(都转换成为字符串后调用的write输出)--%>
+<%--深入源码，浅出结论:在jsp页面中，可以统一使用out.print()来进行输出--%>
 </body>
 </html>
