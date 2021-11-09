@@ -20,11 +20,11 @@ public class SearchStudentServlet extends HttpServlet {
         List<Student> studentList = new ArrayList<Student>();
         for (int i = 0; i < 10; i++) {
             int t = i + 1;
-            studentList.add(new Student(t,"name"+t, 18+t,"phone"+t));
+            studentList.add(new Student(t, "name" + t, 18 + t, "phone" + t));
         }
         //保存查询到的结果（学生信息）到request域中
         req.setAttribute("stuList", studentList);
         //请求转发到showStudent.jsp页面
-        req.getRequestDispatcher("/test/showStudent.jsp").forward(req,resp);
+        req.getRequestDispatcher("/test/showStudent.jsp").forward(req, resp);
     }
 }

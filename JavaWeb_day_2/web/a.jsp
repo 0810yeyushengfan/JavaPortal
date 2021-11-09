@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Title</title>
+    <title>Title</title>
 </head>
 <body>
 <%--第一种，声明脚本:--%>
@@ -17,31 +17,31 @@
 <%--练习:--%>
 <%--1.声明类属性--%>
 <%!
-  private Integer id;
-  private String name;
-  private static Map<String,Object> map;
+    private Integer id;
+    private String name;
+    private static Map<String, Object> map;
 %>
 <%--2.声明static静态代码块--%>
 <%!
-  static {
-    map = new HashMap<String,Object>();
-    map.put("key1", "value1");
-    map.put("key2", "value2");
-    map.put("key3", "value3");
-  }
+    static {
+        map = new HashMap<String, Object>();
+        map.put("key1", "value1");
+        map.put("key2", "value2");
+        map.put("key3", "value3");
+    }
 %>
 <%--3.声明类方法--%>
 <%!
-  public int abc(){
-    return 12;
-  }
+    public int abc() {
+        return 12;
+    }
 %>
 <%--4.声明内部类--%>
 <%!
-  public static class A {
-    private Integer id = 12;
-    private String abc = "abc";
-  }
+    public static class A {
+        private Integer id = 12;
+        private String abc = "abc";
+    }
 %>
 
 <%--第二种，表达式脚本:--%>
@@ -81,8 +81,8 @@
 <%--练习：--%>
 <%--1.代码脚本----if 语句--%>
 <%
-  int i = 13 ;
-  if (i == 12) {
+    int i = 13;
+    if (i == 12) {
 %>
 <h1>帅</h1>
 <%
@@ -90,25 +90,25 @@
 %>
 <h1>骗人</h1>
 <%
-  }
+    }
 %>
 <br>
 <%--2.代码脚本----for循环语句--%>
 <table border="1" cellspacing="0">
-  <%
-    for (int j = 0; j < 10; j++) {
-  %>
-  <tr>
-    <td>第 <%=j + 1%>行</td>
-  </tr>
-  <%
-    }
-  %>
+    <%
+        for (int j = 0; j < 10; j++) {
+    %>
+    <tr>
+        <td>第 <%=j + 1%>行</td>
+    </tr>
+    <%
+        }
+    %>
 </table>
 <%--3.翻译后产生的java文件中_jspService方法内的代码都可以写--%>
 <%
-  String username = request.getParameter("username");
-  System.out.println("用户名的请求参数值是:" + username);
+    String username = request.getParameter("username");
+    System.out.println("用户名的请求参数值是:" + username);
 %>
 
 

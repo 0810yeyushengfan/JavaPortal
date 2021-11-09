@@ -53,7 +53,7 @@ public class HelloServlet2 extends HttpServlet {
         System.out.println("context-param 参数 username 的值是:" + username);
         System.out.println("context-param 参数 password 的值是:" + context.getInitParameter("password"));
         //2.获取当前的工程路径，格式:/工程路径
-        System.out.println( "当前工程路径:" + context.getContextPath() );
+        System.out.println("当前工程路径:" + context.getContextPath());
         //3.获取工程部署后在服务器硬盘上的绝对路径
         //斜杠(/)被服务器解析地址为:http://ip:port/工程名/映射到IDEA代码的web目录
         System.out.println("工程部署的路径是:" + context.getRealPath("/"));
@@ -61,9 +61,9 @@ public class HelloServlet2 extends HttpServlet {
         // 获取ServletContext对象的另一种方法
         ServletContext context1 = getServletContext();
         System.out.println(context1);
-        System.out.println("保存之前:HelloServlet2获取key1的值是:"+ context1.getAttribute("key1"));
+        System.out.println("保存之前:HelloServlet2获取key1的值是:" + context1.getAttribute("key1"));
         context.setAttribute("key1", "value1");
-        System.out.println("保存之后:HelloServlet2中获取域数据key1的值是:"+ context1.getAttribute("key1"));
+        System.out.println("保存之后:HelloServlet2中获取域数据key1的值是:" + context1.getAttribute("key1"));
 
         System.out.println("HelloServlet2的doGet方法");
 

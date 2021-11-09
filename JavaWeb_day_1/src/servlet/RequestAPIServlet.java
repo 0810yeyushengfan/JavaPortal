@@ -3,6 +3,7 @@ package servlet;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
+
 /*
 HttpServletRequest类:
 1.HttpServletRequest类有什么作用:
@@ -35,7 +36,7 @@ public class RequestAPIServlet extends HttpServlet {
         //getHeader():获取请求头
         System.out.println("请求头User-Agent是:" + request.getHeader("User-Agent"));
         //getMethod():获取请求的方式(GET或POST)
-        System.out.println( "请求的方式是:" + request.getMethod() );
+        System.out.println("请求的方式是:" + request.getMethod());
     }
 
     @Override

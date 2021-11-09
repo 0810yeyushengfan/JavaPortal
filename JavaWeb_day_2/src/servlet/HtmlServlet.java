@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
+
 /*
 什么是jsp?
 JSP(全称Java Server Pages)，是由Sun公司专门为了解决动态生成HTML文档的技术。jsp的主要作用是代替Servlet程序回传

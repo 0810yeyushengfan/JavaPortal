@@ -42,7 +42,7 @@ ServletConfig类的三大作用:
 
 public class HelloServlet implements Servlet {
 
-    public HelloServlet(){
+    public HelloServlet() {
         System.out.println("第一步:执行Servlet构造器方法");
     }
 
@@ -52,8 +52,8 @@ public class HelloServlet implements Servlet {
         // 1、可以获取 Servlet 程序的别名 servlet-name 的值
         System.out.println("HelloServlet程序的别名是:" + servletConfig.getServletName());
         // 2、获取初始化参数 init-param
-         System.out.println("初始化参数username的值是:" + servletConfig.getInitParameter("username"));
-         System.out.println("初始化参数url的值是:" + servletConfig.getInitParameter("url"));
+        System.out.println("初始化参数username的值是:" + servletConfig.getInitParameter("username"));
+        System.out.println("初始化参数url的值是:" + servletConfig.getInitParameter("url"));
         // 3、获取 ServletContext 对象
         System.out.println(servletConfig.getServletContext());
 
@@ -72,12 +72,12 @@ public class HelloServlet implements Servlet {
         System.out.println("helloServlet被访问了!");
         System.out.println("第三步:执行service方法");
         //HttpServletRequest是ServletRequest的子类，只有它有getMethod()方法
-        HttpServletRequest httpServletRequest= (HttpServletRequest) servletRequest;
+        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         //获取请求的方式
-        String method=httpServletRequest.getMethod();
-        if("GET".equals(method)){
+        String method = httpServletRequest.getMethod();
+        if ("GET".equals(method)) {
             doGet();
-        }else if("POST".equals(method)){
+        } else if ("POST".equals(method)) {
             doPost();
         }
     }
@@ -92,11 +92,11 @@ public class HelloServlet implements Servlet {
         System.out.println("第四步:执行destroy销毁方法");
     }
 
-    public void doGet(){
+    public void doGet() {
         System.out.println("HelloServlet接收了get请求");
     }
 
-    public void doPost(){
+    public void doPost() {
         System.out.println("HelloServlet接收了post请求");
     }
 }

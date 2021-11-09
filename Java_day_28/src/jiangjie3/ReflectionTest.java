@@ -82,14 +82,18 @@ public class ReflectionTest {
 
         /*
         1.获取指定的某个方法
-        getDeclaredMethod():参数1 ：指明获取的方法的名称  参数2：指明获取的方法的形参列表
+        getDeclaredMethod():
+        参数1:指明获取的方法的名称
+        参数2:指明获取的方法的形参列表
          */
         Method show = clazz.getDeclaredMethod("show", String.class);
         //2.保证当前方法是可访问的
         show.setAccessible(true);
 
         /*
-        3. 调用方法的invoke():参数1：方法的调用者  参数2：给方法形参赋值的实参
+        3.调用方法的invoke():
+        参数1:方法的调用者
+        参数2:给方法形参赋值的实参
         invoke()的返回值即为对应类中调用的方法的返回值。
          */
         Object returnValue = show.invoke(p,"CHN"); //String nation = p.show("CHN");
@@ -118,7 +122,8 @@ public class ReflectionTest {
         //private Person(String name)
         /*
         1.获取指定的构造器
-        getDeclaredConstructor():参数：指明构造器的参数列表
+        getDeclaredConstructor():
+        参数:指明构造器的参数列表
          */
 
         Constructor constructor = clazz.getDeclaredConstructor(String.class);

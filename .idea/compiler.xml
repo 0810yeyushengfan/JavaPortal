@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Maven_java" />
         <module name="JavaWeb_day_4" />
+        <module name="JavaWeb_day_5" />
         <module name="JavaWeb_day_1" />
         <module name="JavaWeb_day_2" />
         <module name="JavaWeb_day_3" />

@@ -3,6 +3,7 @@ package servlet;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
+
 /*
 Servlet类的继承体系:
 1.javax.servlet包下的interface接口Servlet:只是负责定义Servlet程序的访问规范
@@ -17,7 +18,8 @@ public class HelloServlet3 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext context = getServletContext();
-        System.out.println(context); System.out.println("HelloServlet3中获取域数据key1的值是:"+ context.getAttribute("key1"));
+        System.out.println(context);
+        System.out.println("HelloServlet3中获取域数据key1的值是:" + context.getAttribute("key1"));
         System.out.println("HelloServlet3的doGet方法");
     }
 

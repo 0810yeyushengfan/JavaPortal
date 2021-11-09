@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 public class Person {
-//    1.需求——输出Person类中普通属性，数组属性。list集合属性和map集合属性。
+    //    1.需求——输出Person类中普通属性，数组属性。list集合属性和map集合属性。
     private String name;
     private String[] phones;
     private List<String> cities;
-    private Map<String,Object> map;
+    private Map<String, Object> map;
 
     public int getAge() {
         return 18;
