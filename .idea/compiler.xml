@@ -7,11 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Maven_java" />
-        <module name="Maven_Web" />
+        <module name="JavaWeb_day_4" />
         <module name="JavaWeb_day_1" />
-        <module name="Maven_Java" />
         <module name="JavaWeb_day_2" />
         <module name="JavaWeb_day_3" />
+        <module name="Maven_Web" />
+        <module name="Maven_Java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
