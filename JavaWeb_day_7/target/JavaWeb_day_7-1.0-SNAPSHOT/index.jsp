@@ -2,10 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>JSON And AJAX</title>
 </head>
 <body>
-</h1>
-<br/>
 </body>
 </html>

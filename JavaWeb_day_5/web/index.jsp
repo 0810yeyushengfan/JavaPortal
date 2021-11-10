@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Cookie And Session</title>
 </head>
 <body>
 </h1>

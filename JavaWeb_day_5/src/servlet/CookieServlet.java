@@ -16,12 +16,24 @@ import java.io.IOException;
 4.每个Cookie的大小不能超过4kb
  */
 public class CookieServlet extends BaseServlet {
-
+/*
+Cookie有效路径(Path)的设置:
+Cookie的path属性可以有效的过滤哪些Cookie可以发送给服务器，哪些不发
+path属性是通过请求的地址来进行有效的过滤。
+CookieA path=/工程路径
+CookieB path=/工程路径/abc
+请求地址如下:http://ip:port/工程路径/a.html
+CookieA===>发送
+CookieB===>不发送
+请求地址如下:http://ip:port/工程路径/abc/a.html
+CookieA===>发送
+CookieB===>发送
+ */
 
     protected void testPath(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Cookie cookie = new Cookie("path1", "path1");
-        // getContextPath() ===>>>>  得到工程路径
-        cookie.setPath(req.getContextPath() + "/abc"); // ===>>>>  /工程路径/abc
+        //getContextPath():得到当前工程路径
+        cookie.setPath(req.getContextPath() + "/abc"); //A当前工程路径/abc
         resp.addCookie(cookie);
         resp.getWriter().write("创建了一个带有Path路径的Cookie");
     }

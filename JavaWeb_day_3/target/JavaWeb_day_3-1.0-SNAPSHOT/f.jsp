@@ -13,20 +13,20 @@ ${ 12 != 12 ? "夜雨声烦":"夜雨声烦不凡" }
 <%--"."(点)运算和[](中括号)运算符:--%>
 <%--.(点)运算，可以输出Bean对象中某个属性的值。 --%>
 <%--[](中括号)运算，可以输出有序集合中某个元素的值。 并且[]中括号运算，还可以输出map集合中key里含有特殊字符的key的值。--%>
-    <%
-        Map<String,Object> map = new HashMap<String, Object>();
-        map.put("a.a.a", "aaaValue");
-        map.put("b+b+b", "bbbValue");
-        map.put("c-c-c", "cccValue");
-        map.put("t","test");
+<%
+    Map<String, Object> map = new HashMap<String, Object>();
+    map.put("a.a.a", "aaaValue");
+    map.put("b+b+b", "bbbValue");
+    map.put("c-c-c", "cccValue");
+    map.put("t", "test");
 
-        request.setAttribute("map", map);
-    %>
+    request.setAttribute("map", map);
+%>
 
-        ${ map['a.a.a'] } <br>
-        ${ map["b+b+b"] } <br>
-        ${ map['c-c-c'] } <br>
-        ${map.t}
+${ map['a.a.a'] } <br>
+${ map["b+b+b"] } <br>
+${ map['c-c-c'] } <br>
+${map.t}
 
 </body>
 </html>

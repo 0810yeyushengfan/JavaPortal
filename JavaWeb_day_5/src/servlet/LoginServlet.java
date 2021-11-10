@@ -14,7 +14,7 @@ public class LoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        if ("wzg168".equals(username) && "123456".equals(password)) {
+        if ("yeyushengfan".equals(username) && "123456".equals(password)) {
             //登录成功
             Cookie cookie = new Cookie("username", username);
             cookie.setMaxAge(60 * 60 * 24 * 7);//当前Cookie一周内有效

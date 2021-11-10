@@ -8,6 +8,8 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_3" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_4" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_5" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_6" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_7" />
     <file type="web" url="file://$PROJECT_DIR$/Maven_Web" />
     <file type="web" url="file://$PROJECT_DIR$/MyBatis" />
     <file type="web" url="file://$PROJECT_DIR$/untitled" />
@@ -27,6 +29,8 @@
         <option value="$PROJECT_DIR$/JavaWeb_day_3/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb_day_4/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb_day_5/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb_day_7/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb_day_6/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

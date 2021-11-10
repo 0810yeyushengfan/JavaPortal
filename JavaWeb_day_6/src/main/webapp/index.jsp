@@ -2,9 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP</title>
+    <title>Filter</title>
 </head>
 <body>
-<h1>Servlet</h1>
 </body>
 </html>
