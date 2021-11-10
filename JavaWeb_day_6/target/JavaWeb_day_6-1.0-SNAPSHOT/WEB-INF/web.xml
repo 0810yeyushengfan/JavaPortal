@@ -21,7 +21,7 @@
     <filter-mapping>
         <filter-name>AdminFilter</filter-name>
         <!-- 配置拦截路径 -->
-        <!-- /(斜杠)表示到映射到工程路径:http://ip:port/工程路径/ -->
+        <!-- /(斜杠)表示到映射到工程路径 http://ip:port/工程路径/ -->
         <!-- /admin/*表示admin目录下的全部 -->
 <!--        1.精确匹配 -->
 <!--        <url-pattern>/target.jsp</url-pattern> -->
