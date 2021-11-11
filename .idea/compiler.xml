@@ -15,6 +15,7 @@
         <module name="JavaWeb_day_2" />
         <module name="JavaWeb_day_3" />
         <module name="Maven_Web" />
+        <module name="JavaWeb_day_8" />
         <module name="Maven_Java" />
       </profile>
     </annotationProcessing>
