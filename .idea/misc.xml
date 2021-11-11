@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb day 1" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_1" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_10" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_2" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_3" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_4" />
@@ -11,6 +12,7 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_6" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_7" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_8" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_9" />
     <file type="web" url="file://$PROJECT_DIR$/Maven_Web" />
     <file type="web" url="file://$PROJECT_DIR$/MyBatis" />
     <file type="web" url="file://$PROJECT_DIR$/untitled" />
@@ -33,6 +35,7 @@
         <option value="$PROJECT_DIR$/JavaWeb_day_7/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb_day_6/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb_day_8/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb_day_9/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

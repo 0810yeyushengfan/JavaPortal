@@ -6,7 +6,7 @@ errorPage:表示错误后自动跳转去的路径
 -->
 <html>
 <head>
-  <title>Title</title>
+    <title>Title</title>
 </head>
 <body>
 b.jsp页面
@@ -16,8 +16,8 @@ b.jsp页面
 
 <%--单行注释和多行注释能在翻译后的java源代码中看见--%>
 <%
-  //单行java注释
-  /*多行java注释*/
+    //单行java注释
+    /*多行java注释*/
 %>
 
 <%--jsp注释在翻译的时候会直接被忽略掉--%>
