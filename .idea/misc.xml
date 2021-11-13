@@ -15,6 +15,9 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_9" />
     <file type="web" url="file://$PROJECT_DIR$/Maven_Web" />
     <file type="web" url="file://$PROJECT_DIR$/MyBatis" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_1" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_2" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_3" />
     <file type="web" url="file://$PROJECT_DIR$/untitled" />
   </component>
   <component name="MavenProjectsManager">
@@ -36,6 +39,10 @@
         <option value="$PROJECT_DIR$/JavaWeb_day_6/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb_day_8/pom.xml" />
         <option value="$PROJECT_DIR$/JavaWeb_day_9/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb_day_10/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_1/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_2/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_3/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

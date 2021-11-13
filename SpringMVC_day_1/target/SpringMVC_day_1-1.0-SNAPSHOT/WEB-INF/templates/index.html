@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+</head>
+<body>
+<h1>首页</h1>
+<!--
+    这里若是直接使用href="/target"，因为是在客户端，/(斜杠)被解析为localhost:8080/，会出现出错
+    如果使用thymeleaf的语法th:href="@{/target}"，会自动将/(斜杠)解析成当前工程路径，即localhost:8080/SpringMVC_day_1/
+-->
+<a th:href="@{/target}">hello world</a>
+</body>
+</html>

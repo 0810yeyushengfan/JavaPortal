@@ -68,7 +68,6 @@ public class HelloServlet implements Servlet {
     //service()方法是专门用来处理请求和响应
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-
         System.out.println("helloServlet被访问了!");
         System.out.println("第三步:执行service方法");
         //HttpServletRequest是ServletRequest的子类，只有它有getMethod()方法

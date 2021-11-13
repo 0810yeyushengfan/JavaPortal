@@ -36,7 +36,7 @@ public class HtmlServlet extends HttpServlet {
         //上面的代码我们不难发现。通过Servlet输出简单的html页面信息都非常不方便。
         //那我们要输出一个复杂页面的时候，就更加的困难，而且不利于页面的维护和调试。
         //所以sun公司推出一种叫做jsp的动态页面技术帮助我们实现对页面的输出繁锁工作。
-        //注意:jsp页面的访问千万不能像HTML页面一样。托到浏览器中。只能通过浏览器访问Tomcat服务器再访问jsp页面。
+        //注意:jsp页面的访问千万不能像HTML页面一样托到浏览器中。只能通过浏览器访问Tomcat服务器再访问jsp页面。
     }
 
     @Override
