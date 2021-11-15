@@ -18,6 +18,10 @@
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_1" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_2" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_3" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_4" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_5" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_6" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_7" />
     <file type="web" url="file://$PROJECT_DIR$/untitled" />
   </component>
   <component name="MavenProjectsManager">
@@ -43,6 +47,10 @@
         <option value="$PROJECT_DIR$/SpringMVC_day_1/pom.xml" />
         <option value="$PROJECT_DIR$/SpringMVC_day_2/pom.xml" />
         <option value="$PROJECT_DIR$/SpringMVC_day_3/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_4/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_5/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_6/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_day_7/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

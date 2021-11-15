@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/JavaWeb_day_1/web/a.html" value="file://$PROJECT_DIR$/JavaWeb_day_1/web" />
+        <entry key="file://$PROJECT_DIR$/JavaWeb_day_4/src/main/webapp/core.jsp" value="file://$PROJECT_DIR$/JavaWeb_day_4/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/JavaWeb_day_4/web/forEach.jsp" value="file://$PROJECT_DIR$/JavaWeb_day_4/web" />
         <entry key="file://$PROJECT_DIR$/SpringMVC_day_2/src/main/webapp/WEB-INF/templates/index.html" value="file://$PROJECT_DIR$/SpringMVC_day_2/src/main/webapp/WEB-INF/templates" />
       </map>

@@ -21,7 +21,7 @@
                         <!-- 视图后缀 -->
                         <property name="suffix" value=".html"/>
                         <property name="templateMode" value="HTML5"/>
-                        <property name="characterEncoding" value="UTF-8" />
+                        <property name="characterEncoding" value="UTF-8"/>
                     </bean>
                 </property>
             </bean>
@@ -29,10 +29,17 @@
     </bean>
 
 
+    <!--    4.视图控制器view-controller:-->
+    <!--    当控制器方法中，仅仅用来实现页面跳转，即只需要设置视图名称时，可以将处理器方法使用view-controller标签进行表示-->
+    <!--    path:设置处理的请求地址-->
+    <!--    view-name:设置请求地址所对应的视图名称-->
     <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
     <mvc:view-controller path="/test_view" view-name="test_view"></mvc:view-controller>
     <mvc:view-controller path="/test_rest" view-name="test_rest"></mvc:view-controller>
 
+    <!--    注:-->
+    <!--    当SpringMVC中设置任何一个view-controller时，其他控制器中的请求映射将全部失效，-->
+    <!--    此时需要在SpringMVC的核心配置文件中设置开启mvc注解驱动的标签：<mvc:annotation-driven />-->
     <!--开启mvc的注解驱动-->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 </beans>

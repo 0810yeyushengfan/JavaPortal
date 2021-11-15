@@ -13,12 +13,6 @@ import java.util.Map;
 
 @Controller
 public class ScopeController {
-
-//    @RequestMapping("/")
-//    public String index() {
-//        return "index";
-//    }
-
     //1.使用ServletAPI向request域对象共享数据
     @RequestMapping("/testRequestByServletAPI")
     public String testRequestByServlet(HttpServletRequest request) {
@@ -86,8 +80,8 @@ public class ScopeController {
     //7.向application域共享数据
     @RequestMapping("testApplication")
     public String testApplication(HttpSession session) {
-        ServletContext application=session.getServletContext();
-        application.setAttribute("testApplicationScope","hello,Application");
+        ServletContext application = session.getServletContext();
+        application.setAttribute("testApplicationScope", "hello,Application");
         return "success";
 
     }

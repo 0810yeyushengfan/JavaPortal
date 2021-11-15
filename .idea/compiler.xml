@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringMVC_day_3" />
+        <module name="SpringMVC_day_4" />
         <module name="SpringMVC_day_1" />
         <module name="SpringMVC_day_2" />
         <module name="Maven_Java" />
@@ -19,7 +20,10 @@
         <module name="JavaWeb_day_2" />
         <module name="JavaWeb_day_3" />
         <module name="JavaWeb_day_10" />
+        <module name="SpringMVC_day_7" />
         <module name="Maven_Web" />
+        <module name="SpringMVC_day_5" />
+        <module name="SpringMVC_day_6" />
         <module name="JavaWeb_day_8" />
         <module name="JavaWeb_day_9" />
       </profile>

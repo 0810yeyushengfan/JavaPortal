@@ -33,4 +33,24 @@
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+<!--    在web.xml中注册HiddenHttpMethodFilter-->
+<!--    注意:-->
+<!--    目前为止，SpringMVC中提供了两个过滤器：CharacterEncodingFilter和HiddenHttpMethodFilter-->
+<!--    在web.xml中注册时，必须先注册CharacterEncodingFilter，再注册HiddenHttpMethodFilter-->
+<!--    原因:-->
+<!--    在CharacterEncodingFilter中通过request.setCharacterEncoding(encoding)方法设置字符集的-->
+<!--    request.setCharacterEncoding(encoding)方法要求前面不能有任何获取请求参数的操作 -->
+<!--    而HiddenHttpMethodFilter恰恰有一个获取请求方式的操作:-->
+<!--    String paramValue = request.getParameter(this.methodParam);-->
+
+
+    <filter>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
