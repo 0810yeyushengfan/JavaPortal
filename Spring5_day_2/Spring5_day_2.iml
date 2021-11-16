@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Bean1" removed="false">
-          <file>file://$MODULE_DIR$/src/bean1.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
-  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -16,11 +7,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library name="commons-logging-1.1.1">
+    <orderEntry type="module-library">
+      <library name="druid-1.1.9">
         <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/druid-1.1.9.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/commons-logging-1.1.1.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/spring-beans-5.2.6.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/spring-aop-5.2.6.RELEASE.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/spring-context-5.2.6.RELEASE.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/spring-core-5.2.6.RELEASE.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/spring-expression-5.2.6.RELEASE.jar!/" />
@@ -30,14 +23,5 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="JUnit4" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/druid-1.1.9.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
 </module>
