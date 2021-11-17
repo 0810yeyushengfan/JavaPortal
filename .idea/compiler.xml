@@ -26,6 +26,7 @@
         <module name="SpringMVC_day_6" />
         <module name="JavaWeb_day_8" />
         <module name="JavaWeb_day_9" />
+        <module name="SpringBoot2_day_1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -40,6 +41,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JavaWeb_day_6" options="" />
+      <module name="SpringBoot2_day_1" options="-parameters" />
     </option>
   </component>
 </project>

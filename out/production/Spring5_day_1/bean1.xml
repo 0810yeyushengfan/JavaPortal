@@ -12,6 +12,7 @@
     <!--1.Spring创建对象-->
     <!--2.Spring注入属性-->
 
+    <!--基于xml方式的IOC操作bean:-->
 
     <!--1.基于xml方式创建对象:-->
     <!--1.1.在spring配置文件中，使用bean标签，标签里面添加对应属性，就可以实现对象创建-->
@@ -261,4 +262,12 @@
         <property name="password" value="${prop.password}"></property>
     </bean>
 
+    <!--基于注解方式的IOC操作bean:-->
+
+    1.基于注解方式实现对象创建
+    1.1.引入依赖
+    1.2.开启组件扫描
+    <!--开启组件扫描:如果扫描多个包，可以将多个包使用逗号隔开，或者直接扫描包上层目录-->
+    <context:component-scan base-package="com.yeyu"></context:component-scan>
+    第三步 创建类，在类上面添加创建对象注解
 </beans>
