@@ -11,6 +11,7 @@
         <module name="SpringMVC_day_1" />
         <module name="SpringMVC_day_2" />
         <module name="Maven_Java" />
+        <module name="SSM_integration" />
         <module name="Maven_java" />
         <module name="JavaWeb_day_4" />
         <module name="JavaWeb_day_5" />
