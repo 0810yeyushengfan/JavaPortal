@@ -1,0 +1,26 @@
+lEsson: SpringBoot
+
+server:
+  port: 8081
+
+enterprise:
+  name: ityeyu
+  age: 16
+  tel: 4006184000
+  subject:
+    - java
+    - cpp
+    - python
+#我是注释 #注释支持嵌套 ####只有第一个#会解析成注释
+
+
+BOOLEAn: TruE #TRUE,true,True,FALSE,false，False均可
+float: 3.14 #6.8523015e+5 #支持科学计数法
+int: 123 #0b1010_0111_0100_1010_1110 #支持二进制、八进制、十六进制
+ #使用~表示nullstring: HelloWorld #字符串可以直接书写
+string2: "Hello World" #可以使用双引号包裹特殊字符
+date: 2018-02-17 #日期必须使用yyyy-MM-dd格式
+datetime: 2018-02-17T15:02:31+08:00 #时间和日期之间使用T连接，最后使用+代表时区
+
+lesson1: "Spring\tboot\nlesson"
+lesson2: Spring\tboot\nlesson
