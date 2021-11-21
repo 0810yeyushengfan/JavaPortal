@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -10,8 +11,10 @@
         <module name="SpringMVC_day_4" />
         <module name="SpringMVC_day_1" />
         <module name="SpringMVC_day_2" />
-        <module name="Maven_Java" />
         <module name="SSM_integration" />
+        <module name="JavaWeb_day_10" />
+        <module name="SpringBoot2_ssmp" />
+        <module name="Maven_Java" />
         <module name="Maven_java" />
         <module name="JavaWeb_day_4" />
         <module name="JavaWeb_day_5" />
@@ -20,8 +23,8 @@
         <module name="JavaWeb_day_1" />
         <module name="JavaWeb_day_2" />
         <module name="JavaWeb_day_3" />
-        <module name="JavaWeb_day_10" />
         <module name="SpringMVC_day_7" />
+        <module name="SpringBoot2_day_3" />
         <module name="Maven_Web" />
         <module name="SpringMVC_day_5" />
         <module name="SpringMVC_day_6" />
@@ -44,6 +47,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JavaWeb_day_6" options="" />
       <module name="SpringBoot2_day_1" options="-parameters" />
+      <module name="SpringBoot2_day_3" options="-parameters" />
+      <module name="SpringBoot2_ssmp" options="-parameters" />
     </option>
   </component>
 </project>
