@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SpringAnnotation_day_1" />
         <module name="SpringMVC_day_3" />
         <module name="SpringMVC_day_4" />
         <module name="SpringMVC_day_1" />
         <module name="SpringMVC_day_2" />
         <module name="SpringBoot2_day_10" />
         <module name="SpringBoot2_day_11" />
-        <module name="SSM_integration" />
         <module name="SpringBoot2_day_12" />
         <module name="SpringBoot2_day_13" />
         <module name="JavaWeb_day_10" />
@@ -49,6 +49,7 @@
       <module name="Maven day 2" target="1.8" />
       <module name="Maven_java" target="1.8" />
       <module name="MyBatis day 6" target="1.8" />
+      <module name="SSM_integration" target="1.8" />
       <module name="test" target="1.8" />
       <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>
