@@ -28,7 +28,10 @@
           <root url="jar://$MODULE_DIR$/lib/spring-expression-5.2.6.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-context-5.2.6.RELEASE-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/spring-context-5.2.6.RELEASE-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" name="JUnit4" level="project" />

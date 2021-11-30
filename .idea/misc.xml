@@ -7,6 +7,7 @@
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/demo" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb day 1" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_1" />
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_10" />
@@ -20,6 +21,8 @@
     <file type="web" url="file://$PROJECT_DIR$/JavaWeb_day_9" />
     <file type="web" url="file://$PROJECT_DIR$/Maven_Web" />
     <file type="web" url="file://$PROJECT_DIR$/MyBatis" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringAnnotation_day_2" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringAnnotation_day_3" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_1" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_2" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVC_day_3" />
@@ -72,6 +75,9 @@
         <option value="$PROJECT_DIR$/SpringBoot2_day_12/pom.xml" />
         <option value="$PROJECT_DIR$/SpringBoot2_day_13/pom.xml" />
         <option value="$PROJECT_DIR$/SpringAnnotation_day_1/pom.xml" />
+        <option value="$PROJECT_DIR$/vueblog/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringAnnotation_day_2/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringAnnotation_day_3/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

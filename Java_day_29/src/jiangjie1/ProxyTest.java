@@ -22,6 +22,10 @@ interface Human{
 //被代理类
 class SuperMan implements Human{
 
+    //不能增强被代理类自身的方法，即不是通过实现接口创建的方法
+    public void test(){
+        System.out.println("!!!");
+    }
 
     @Override
     public String getBelief() {

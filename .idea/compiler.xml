@@ -11,13 +11,16 @@
         <module name="SpringMVC_day_3" />
         <module name="SpringMVC_day_4" />
         <module name="SpringMVC_day_1" />
+        <module name="SpringAnnotation_day_2" />
         <module name="SpringMVC_day_2" />
+        <module name="SpringAnnotation_day_3" />
         <module name="SpringBoot2_day_10" />
         <module name="SpringBoot2_day_11" />
         <module name="SpringBoot2_day_12" />
         <module name="SpringBoot2_day_13" />
         <module name="JavaWeb_day_10" />
         <module name="SpringBoot2_ssmp" />
+        <module name="vueblog" />
         <module name="Maven_Java" />
         <module name="Maven_java" />
         <module name="JavaWeb_day_4" />
@@ -45,6 +48,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
       <module name="JavaWeb day 1" target="1.8" />
       <module name="Maven day 2" target="1.8" />
       <module name="Maven_java" target="1.8" />
@@ -70,6 +74,7 @@
       <module name="SpringBoot2_day_8" options="-parameters" />
       <module name="SpringBoot2_day_9" options="-parameters" />
       <module name="SpringBoot2_ssmp" options="-parameters" />
+      <module name="vueblog" options="-parameters" />
     </option>
   </component>
 </project>
